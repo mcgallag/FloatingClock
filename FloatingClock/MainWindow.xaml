@@ -1,12 +1,23 @@
 ﻿<Window x:Class="FloatingClock.MainWindow"
+        x:Name="FloatingClockWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FloatingClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="88" Width="200" WindowStyle="None" Background="#FF252525" Opacity="0.90" ResizeMode="NoResize"
+        Left="1700.0" Top="950.0"
+        Topmost="True" AllowsTransparency="True" ShowInTaskbar="False" Icon="Resources/Images/clock.png">
+  <Grid>
+    <TextBlock x:Name="DateBlock" Foreground="#15fc11"
+               FontSize="16" TextAlignment="Center"
+               FontFamily="/FloatingClock;component/Resources/Fonts/#IBM Plex Mono"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center" Padding="0 5"/>
+    <TextBlock x:Name="ClockBlock" Foreground="#15fc11"
+               FontSize="60" TextAlignment="Center"
+               FontFamily="/FloatingClock;component/Resources/Fonts/#IBM Plex Mono" Height="75"
+               VerticalAlignment="Bottom"/>
+  </Grid>
 </Window>
