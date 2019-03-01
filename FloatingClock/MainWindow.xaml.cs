@@ -70,7 +70,7 @@ namespace FloatingClock
             else
                 DateBlock.Text = now.ToString("MM/dd/yyyy");
 
-            if (now.Hour % 12 < 10)
+            if (int.Parse(now.ToString("%h")) < 10)
                 ClockBlock.Text = now.ToString(" h:mm");
             else
                 ClockBlock.Text = now.ToString("hh:mm");
